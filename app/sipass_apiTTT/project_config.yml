@@ -1,0 +1,22 @@
+name: hyssop Server
+port: 4444
+debug: False
+doc:
+  description: haha api
+cors:
+  - origin: '*'
+    allow_credentials: True
+    expose_headers: '*'
+    allow_headers: '*'
+component:
+  Register: 
+    p1: 'This is p1pppp'
+
+  Login: 
+    p1: 'This is Loginp1pppp'  
+controller:
+  /haha_worldxxxwww:
+    enum: haha_worldxxxwww
+aiohttpDDDD:
+   route_decoratorsCCC:  
+    - 'TTT_view'

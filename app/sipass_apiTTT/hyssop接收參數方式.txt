@@ -1,0 +1,21 @@
+get_argument('kkk')
+
+phone_no = await self.get_argument('kkk',default='預設參數值')
+phone_no = await self.get_arguments_dict(['ccc','password'])
+
+get
+phone_no = await request.get_argument('yyy')
+
+post
+dict = await request.get_arguments_dict(['k1', 'k2','k3'])
+
+@routes.get('/api/{key}')
+restful = request.match_info.get('key')
+
+@routes.post('/api/{key}')
+restful = request.match_info.get('key')
+
+
+
+@routes.post('/api/singiup/user')
+@routes.post('/api/singin/user')

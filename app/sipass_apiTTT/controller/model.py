@@ -163,7 +163,7 @@ async def singin(request):
     response = registerObj.loginProcess(**datas)                     #ok                
     
     timeDuration = now() - start
-    return  web.Response(text= response + (timeDuration))
+    return  web.Response(text= response + str(timeDuration))
     
 @routes.post('/api/singinpost/user')
 async def kkkhello(request): #AioHttpRequest

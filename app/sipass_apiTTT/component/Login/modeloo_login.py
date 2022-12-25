@@ -23,11 +23,11 @@ class LoginComponent(Component):
     def init(self, component_manager, p1, *arugs, **kwargs) -> None:
         print('init Login component load from', __package__, 'and the parameters p1:', p1)
        
-    async def loginProcess(self,**datas):
+    def loginProcess(self,**datas):
         session = create_session()
-        username_exist =await session.query(Signup).filter(Signup.username == datas['username'],).all() 
+        username_exist = session.query(Signup).filter(Signup.username == datas['username'],).all() 
         if username_exist:  #確認有此username
-            check_PWD = await session.query(Signup).filter(Signup.hash_password == hash_PWD(datas['password']),).filter(Signup.username == datas['username'],).all()  
+            check_PWD =  session.query(Signup).filter(Signup.hash_password == hash_PWD(datas['password']),).filter(Signup.username == datas['username'],).all()  
             if check_PWD:  #確認有此密碼的hash_password
                 
                 update_time = {"update_time": datetime.now()}       #登入的時間
